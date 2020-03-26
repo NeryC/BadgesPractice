@@ -1,0 +1,23 @@
+.twitterText{
+    color:lightskyblue;
+    font-size: 12px;
+    font-weight: bold;
+}
+.twitterImage{
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.userLogo{
+    width: 4rem;
+    height: 4rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
+}
+.cardTitle{
+    font-size: 1rem;
+}
+.cardDescription{
+    font-size: 0.8rem;
+}

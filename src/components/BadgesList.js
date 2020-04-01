@@ -3,6 +3,7 @@ import React from 'react';
 import './styles/BadgesList.css'; 
 import twitterLogo from '../images/twitter.svg';
 import userLogo from '../images/bot.svg';
+import Gravatar from './Gravatar'
 import { Link } from 'react-router-dom';
 
 class BadgesList extends React.Component{
@@ -25,7 +26,7 @@ class BadgesList extends React.Component{
               <div className="card mb-3">
                 <div className="row no-gutters">
                   <div className="col-md-4">
-                    <img className=" userLogo " src={userLogo} alt="User Logo"/>
+                    <Gravatar className="userLogo" email={badge.email} />
                   </div>
                   <div className="col-md-8">
                     <div className="card-body">
@@ -41,9 +42,6 @@ class BadgesList extends React.Component{
                   </div>
                 </div>
               </div>
-              {/* <p>
-                {badge.firstName} {badge.lastName}
-              </p> */}
             </li>
           );
         })}

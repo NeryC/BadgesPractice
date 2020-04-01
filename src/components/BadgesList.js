@@ -2,7 +2,6 @@ import React from 'react';
 
 import './styles/BadgesList.css'; 
 import twitterLogo from '../images/twitter.svg';
-import userLogo from '../images/bot.svg';
 import Gravatar from './Gravatar'
 import { Link } from 'react-router-dom';
 

@@ -1,16 +1,10 @@
 import React from 'react';
 
 class BadgeForm extends React.Component{
-  
-  handleClick = e => {
-    console.log('Buton click');
-  }
 
   render() {
     return(
       <div>
-        <h1>New Attendant</h1>
-
         <form onSubmit={this.props.onSubmit}>
           <div className="form-group">
             <label>First Name</label>

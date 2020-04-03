@@ -1,9 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Link} from 'react-router-dom';
 
 import confLogo from '../images/platziconf-logo.svg';
 import Badge from '../components/Badge';
+import DeleteBadgeModal from '../components/DeleteBadgeModal';
 
 function BadgeDetails(props){
   return(
@@ -40,13 +40,14 @@ function BadgeDetails(props){
                   </Link>
                 </div>
                 <div>
-                  <button className="btn btn-danger" to={`/badges/${props.badges.id}/edit`}>
+                  <button onClick={props.onOpenModal} className="btn btn-danger" to={`/badges/${props.badges.id}/edit`}>
                     Delete
                   </button>
-                  {ReactDOM.createPortal(
-                    <h1>No estoy aqui</h1>,
-                    document.getElementById('modal')
-                  )}
+                  <DeleteBadgeModal 
+                    isOpen={props.modalIsOpen} 
+                    onClose={props.onCloseModal}
+                    onDeleteBadge={props.onDeleteBadge}
+                  />
                 </div>
               </div>
             </div>
